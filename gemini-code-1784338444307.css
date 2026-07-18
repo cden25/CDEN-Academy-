@@ -1,0 +1,895 @@
+/* Custom properties matching modern terminal dark aesthetic in your screenshots */
+:root {
+    --bg-dark: #070b14;
+    --bg-card: #0e1626;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-blue: #06b6d4;
+    --accent-glow: rgba(37, 99, 235, 0.15);
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+    --green-bright: #10b981;
+    --red-bright: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .cden-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Header & Navigation style mirroring screenshot 1 & 3 layout */
+.main-header {
+    background-color: rgba(14, 22, 38, 0.95);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cden-logo {
+    background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    letter-spacing: 1px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-main);
+    border-bottom: 2px solid var(--primary);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Premium Hero Design */
+.hero-section {
+    position: relative;
+    padding: 8rem 5% 6rem 5%;
+    background: radial-gradient(circle at center, #0f1c3f 0%, var(--bg-dark) 100%);
+    text-align: center;
+}
+
+.hero-badge {
+    background-color: var(--accent-glow);
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    color: var(--accent-blue);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+    line-height: 1.2;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(to right, var(--primary), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--text-muted);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 0.8rem 1.75rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1.5px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-muted);
+    background-color: var(--border-color);
+}
+
+.hero-motto {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.hero-motto span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-motto span::before {
+    content: "•";
+    color: var(--accent-blue);
+}
+
+/* Vision Mission Info Cards */
+.vision-mission-section {
+    padding: 4rem 5%;
+}
+
+.info-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: border 0.3s;
+}
+
+.info-card:hover {
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Section Header styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* Academic Schools Cards List */
+.schools-section {
+    padding: 4rem 5%;
+    background-color: rgba(14, 22, 38, 0.4);
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.school-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.school-icon-wrap {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+}
+
+.school-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.school-card .programme-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: auto;
+    display: block;
+}
+
+/* Case Files section layout styling */
+.case-files-section {
+    padding: 4rem 5%;
+}
+
+.case-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.case-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.case-status.active {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: var(--red-bright);
+}
+
+.case-status.resolved {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--green-bright);
+}
+
+.case-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+}
+
+.case-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--accent-blue);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s;
+    margin-top: auto;
+}
+
+.btn-text:hover {
+    gap: 0.75rem;
+}
+
+/* Digital Library Section Graphic mockup representation */
+.library-section {
+    padding: 4rem 5%;
+    background-color: rgba(14, 22, 38, 0.4);
+}
+
+.library-features {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.library-features li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.library-features i {
+    color: var(--accent-blue);
+}
+
+.mock-book-shelf {
+    height: 300px;
+    border-bottom: 8px solid var(--border-color);
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.book-spine {
+    width: 60px;
+    padding: 1.5rem 0.5rem;
+    writing-mode: vertical-rl;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 4px 4px 0 0;
+    height: 80%;
+    transform: rotate(180deg);
+}
+
+.forensic-spine { background-color: var(--primary); height: 90%; }
+.law-spine { background-color: #5b21b6; height: 85%; }
+.crim-spine { background-color: #065f46; height: 95%; }
+
+/* Assessment Verification Section styling */
+.assessment-section {
+    padding: 4rem 5%;
+}
+
+.assessment-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+}
+
+.cert-generator .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group input, .form-group select {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    color: var(--text-main);
+}
+
+/* Verifiable Certificate styling output area */
+.certificate-container {
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.certificate-frame {
+    background-color: #fff;
+    color: #0f172a;
+    border: 12px double #0f172a;
+    padding: 3rem;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+}
+
+.cert-header h4 {
+    letter-spacing: 2px;
+    margin-bottom: 0.25rem;
+}
+
+.cert-motto {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cert-body {
+    margin: 2.5rem 0;
+}
+
+.cert-subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #475569;
+}
+
+.cert-body h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--primary);
+}
+
+.cert-body h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #0f172a;
+}
+
+.cert-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 3rem;
+}
+
+.cert-sig-block {
+    width: 200px;
+}
+
+.signature-line {
+    border-bottom: 1px solid #0f172a;
+    height: 30px;
+    margin-bottom: 0.5rem;
+}
+
+.cert-id-block {
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+/* Terminals Contact Layout Grid */
+.contact-section {
+    padding: 4rem 5%;
+    background-color: rgba(14, 22, 38, 0.4);
+}
+
+.contact-items {
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    background-color: var(--accent-glow);
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.contact-item a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.contact-item a:hover {
+    color: var(--accent-blue);
+}
+
+/* Interactive Dev Terminal representation styling */
+.terminal-box {
+    background-color: #030712;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #0b0f19;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red { background-color: var(--red-bright); }
+.dot.yellow { background-color: #f59e0b; }
+.dot.green { background-color: var(--green-bright); }
+
+.terminal-title {
+    font-family: monospace;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.term-line {
+    margin-bottom: 0.5rem;
+}
+
+.text-green { color: var(--green-bright); }
+
+/* Unified Program course module Overlay pop up */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 7, 18, 0.9);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: var(--text-main);
+}
+
+.modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    height: 100%;
+}
+
+/* Left content Area details dynamic tabs */
+.modal-course-details {
+    padding: 2.5rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--border-color);
+}
+
+.course-desc-p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.course-tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
+    font-weight: 600;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-content {
+    display: block;
+}
+
+/* Dynamic Course Roadmap items */
+.roadmap-step {
+    border-left: 2px solid var(--border-color);
+    padding-left: 1.5rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.roadmap-step::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 5px;
+}
+
+.roadmap-step h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.roadmap-step p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Practice evaluation quiz components inside tabs */
+.quiz-options {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.quiz-option {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.quiz-option.selected {
+    border-color: var(--primary);
+    background-color: var(--accent-glow);
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.quiz-feedback.success {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--green-bright);
+}
+
+.quiz-feedback.error {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: var(--red-bright);
+}
+
+/* Active Intelligent Mentor Simulated agent Chat Interface Area on Right column */
+.modal-mentor-chat {
+    background-color: #0b111e;
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-chat-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.mentor-avatar {
+    background-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.mentor-status {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.pulse-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--green-bright);
+    border-radius: 50%;
+}
+
+.mentor-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    max-width: 85%;
+    font-size: 0.85rem;
+}
+
+.system-msg {
+    align-self: flex-start;
+    background-color: var(--border-color);
+}
+
+.user-msg {
+    align-self: flex-end;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.mentor-chat-input-area {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mentor-chat-input-area input {
+    flex: 1;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-main);
+}
+
+.mentor-chat-input-area button {
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Hidden elements utilities */
+.hidden { display: none !important; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .mobile-menu-toggle {
+        display: block;
+    }
+    .modal-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-mentor-chat {
+        display: none; /* Hide mentor side chat panel inside dialog frame on small screens */
+    }
+}

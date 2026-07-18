@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDEN Digital Criminology Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0f1d">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="cden-logo">CDEN</div>
+            <div class="logo-text">
+                <span class="logo-title">PORTAL</span>
+                <span class="logo-sub">Criminology Academy</span>
+            </div>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#schools" class="nav-link">Schools</a>
+            <a href="#case-files" class="nav-link">Case Files</a>
+            <a href="#library" class="nav-link">Library</a>
+            <a href="#assessment" class="nav-link">Assessments</a>
+            <a href="#community" class="nav-link">Community</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">CRIMINOLOGY DEVELOPMENT EXCELLENCE NETWORK</span>
+                <h1 class="hero-title">Connecting Nations Across<br><span class="highlight">One Unified Platform</span></h1>
+                <p class="hero-subtitle">Welcome to a premium, cross-border initiative built for modern collaboration. This academy enables direct access to world-class learning modules, structured case files, and interactive digital intelligence systems.</p>
+                <div class="hero-actions">
+                    <a href="#schools" class="btn btn-primary">Explore Schools <i class="fa-solid fa-graduation-cap"></i></a>
+                    <a href="https://chat.whatsapp.com/HdC1KxZ9thJ8Fc3zpqLSB1" target="_blank" class="btn btn-secondary">Join Network <i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="hero-motto">
+                    <span>Learn.</span> <span>Investigate.</span> <span>Protect.</span> <span>Lead.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="vision-mission-section">
+            <div class="container grid-2">
+                <div class="info-card vision-card">
+                    <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To become Africa's leading digital academy for criminology, criminal investigation, cybersecurity, forensic science, intelligence, and security education through innovative technology, practical learning, and professional development.</p>
+                </div>
+                <div class="info-card mission-card">
+                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To equip students, professionals, researchers, and security practitioners with practical knowledge, critical thinking, investigative skills, ethical values, and emerging technologies required to prevent crime, investigate offences, and improve justice systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schools" class="schools-section">
+            <div class="section-header">
+                <h2>Institutional Architecture</h2>
+                <p>Explore our 12 specialized schools offering structured training programs built around empirical security techniques.</p>
+            </div>
+            <div class="container">
+                <div class="schools-grid" id="schoolsGrid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="case-files" class="case-files-section">
+            <div class="section-header">
+                <h2>CDEN Master Case Files</h2>
+                <p>Engage with active-simulation investigations. Analyze evidence, draft profiles, and examine real national & international case studies.</p>
+            </div>
+            <div class="container grid-3">
+                <div class="case-card">
+                    <span class="case-status active">Active Case</span>
+                    <h3>Case File #104: The Cyber-Heist Sequence</h3>
+                    <p>Analyze malicious social engineering attempts targeting cross-border transactional institutions. Examine digital logs and reconstruct the incident sequence.</p>
+                    <button class="btn-text open-case-btn" data-case="cyber">Begin Investigation <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="case-card">
+                    <span class="case-status resolved">Completed Analysis</span>
+                    <h3>Case File #88: The Forensic Trace</h3>
+                    <p>Analyze physical and behavioral evidence found during an offshore crime scene simulation. Construct chronological behavior patterns of suspected actors.</p>
+                    <button class="btn-text open-case-btn" data-case="forensic">Open Case File <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="case-card">
+                    <span class="case-status active">Active Case</span>
+                    <h3>Case File #112: Cross-Border Logistics</h3>
+                    <p>Investigating transnational trafficking indicators using satellite mapping, corporate intelligence structures, and financial auditing trails.</p>
+                    <button class="btn-text open-case-btn" data-case="logistics">Begin Investigation <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="library" class="library-section">
+            <div class="container grid-2">
+                <div class="library-info">
+                    <h2>CDA Digital Intelligence Library</h2>
+                    <p>Access our comprehensive repository of criminological research papers, criminal law codes, legal templates, investigation guidelines, and system guides.</p>
+                    <ul class="library-features">
+                        <li><i class="fa-solid fa-file-pdf"></i> Academic Criminology Research Papers</li>
+                        <li><i class="fa-solid fa-scale-balanced"></i> West African Legal Codes & Procedures</li>
+                        <li><i class="fa-solid fa-microscope"></i> Cyber Forensic Guidelines & Chain of Custody Forms</li>
+                        <li><i class="fa-solid fa-shield-halved"></i> Corporate Threat Assessment Templates</li>
+                    </ul>
+                    <a href="https://cden25.github.io/c.d.e.n./" target="_blank" class="btn btn-primary">Browse Digital Library</a>
+                </div>
+                <div class="library-visual">
+                    <div class="mock-book-shelf">
+                        <div class="book-spine forensic-spine">Digital Forensics Vol. 1</div>
+                        <div class="book-spine law-spine">Procedural Evidence Law</div>
+                        <div class="book-spine crim-spine">Behavioral Analysis & Profiling</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assessment" class="assessment-section">
+            <div class="section-header">
+                <h2>CDA Certification Engine</h2>
+                <p>Complete your evaluation, generate your verifiable program completion badge, and access your custom-issued CDEN Certificate of Completion.</p>
+            </div>
+            <div class="container">
+                <div class="assessment-card">
+                    <div class="cert-generator">
+                        <h3>Verifiable Certificate Registry</h3>
+                        <p>Input your full legal name below to generate your official CDEN Digital Criminology Academy certification credentials.</p>
+                        <div class="form-group">
+                            <input type="text" id="studentNameInput" placeholder="Enter Full Student Name" required>
+                            <select id="certProgramSelect">
+                                <option value="Executive Criminology Certification">Introduction to Criminology</option>
+                                <option value="Digital Forensics & Incident Response">Digital Evidence Preservation</option>
+                                <option value="Cybersecurity and Corporate Intelligence">Cyber Hygiene & Threat Assessment</option>
+                                <option value="Criminal Behavioral Profiling Suite">Behavioral Profiling Concepts</option>
+                            </select>
+                            <button id="generateCertBtn" class="btn btn-primary">Generate Certificate <i class="fa-solid fa-signature"></i></button>
+                        </div>
+                    </div>
+                    <div id="certificateContainer" class="certificate-container hidden">
+                        <div class="certificate-frame">
+                            <div class="cert-header">
+                                <div class="cert-badge-logo">CDEN</div>
+                                <h4>CDEN DIGITAL CRIMINOLOGY ACADEMY</h4>
+                                <p class="cert-motto">Learn • Investigate • Protect • Lead</p>
+                            </div>
+                            <div class="cert-body">
+                                <span class="cert-subtitle">THIS OFFICIAL CERTIFICATE IS PROUDLY ISSUED TO</span>
+                                <h2 id="certStudentName">STUDENT NAME</h2>
+                                <p>for successfully completing all requirements, assessments, practical examinations, and case study evaluations for the specialized programme:</p>
+                                <h3 id="certProgramName">EXECUTIVE PROGRAMME NAME</h3>
+                            </div>
+                            <div class="cert-footer">
+                                <div class="cert-sig-block">
+                                    <div class="signature-line"></div>
+                                    <p>Director of Criminology Programs</p>
+                                </div>
+                                <div class="cert-id-block">
+                                    <p><strong>Verification ID:</strong> <span id="certId">CDA-90827-X</span></p>
+                                    <p><strong>Date Issued:</strong> <span id="certDate">July 2026</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary print-cert-btn" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save PDF</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="contact-section">
+            <div class="container grid-2">
+                <div class="contact-text">
+                    <h2>Official Channels & Academic Inquiries</h2>
+                    <p>Connect with our admissions, advisory mentors, and technical teams using only the official communication routes specified below.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-globe"></i>
+                            <div>
+                                <h4>Official Academy Site</h4>
+                                <a href="https://cden25.github.io/c.d.e.n./" target="_blank">cden25.github.io/c.d.e.n./</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <h4>Academic WhatsApp Community</h4>
+                                <a href="https://chat.whatsapp.com/HdC1KxZ9thJ8Fc3zpqLSB1" target="_blank">Join CDEN Official Lounge</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Academic & Partner Email</h4>
+                                <a href="mailto:cden.2580@gmail.com">cden.2580@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-interactive">
+                    <div class="terminal-box">
+                        <div class="terminal-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="terminal-title">CDEN Academy Network Portal</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="term-line">> CDEN System diagnostics running...</p>
+                            <p class="term-line">> Status: <span class="text-green">ONLINE [SECURE]</span></p>
+                            <p class="term-line">> PWA assets loaded.</p>
+                            <p class="term-line">> Welcome to the Digital Crime Academy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="courseModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-course-details">
+                    <h2 id="modalCourseTitle">Course Program</h2>
+                    <p id="modalCourseDesc" class="course-desc-p">Loading course specifications...</p>
+                    
+                    <div class="course-tabs">
+                        <button class="tab-btn active" data-tab="syllabus">Syllabus Roadmap</button>
+                        <button class="tab-btn" data-tab="quiz">Practice Quiz</button>
+                    </div>
+
+                    <div id="syllabusTab" class="tab-content active-content">
+                        <div class="roadmap-wrapper" id="roadmapList">
+                            </div>
+                    </div>
+
+                    <div id="quizTab" class="tab-content">
+                        <div id="quizContainer" class="quiz-container">
+                            <p id="quizQuestion">Loading interactive quiz session...</p>
+                            <div class="quiz-options" id="quizOptions"></div>
+                            <button id="quizSubmitBtn" class="btn btn-primary" style="margin-top:1rem;">Submit Answer</button>
+                            <div id="quizFeedback" class="quiz-feedback hidden"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-mentor-chat">
+                    <div class="mentor-chat-header">
+                        <div class="mentor-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <h4 id="modalMentorName">CDEN Mentor</h4>
+                            <span class="mentor-status"><span class="pulse-dot"></span> Intelligent Agent</span>
+                        </div>
+                    </div>
+                    <div class="mentor-chat-messages" id="mentorChatMessages">
+                        <div class="message system-msg">
+                            Welcome! I am your designated CDEN Mentor for this program. Ask me any conceptual question or seek support for your study modules.
+                        </div>
+                    </div>
+                    <div class="mentor-chat-input-area">
+                        <input type="text" id="mentorChatInput" placeholder="Ask your CDEN Mentor...">
+                        <button id="sendChatBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 CDEN Digital Criminology Academy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
